@@ -7,7 +7,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import { Nav } from './components';
+import { Navigation } from './components';
 import { NAV_ITEMS } from "./constants";
 
 export const meta: MetaFunction = () => ({
@@ -24,7 +24,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Nav items={NAV_ITEMS} />
+        <Navigation items={NAV_ITEMS} />
         <main>
           <Outlet />
         </main>

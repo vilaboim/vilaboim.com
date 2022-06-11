@@ -1,5 +1,5 @@
-import Nav from './Nav'
+import Navigation from './Navigation'
 
 export {
-  Nav
+  Navigation
 }

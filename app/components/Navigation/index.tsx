@@ -1,13 +1,13 @@
 import { NavLink } from "@remix-run/react";
 
-interface NavLinkProps {
-  label: string;
-  to: string;
+interface NavigationProps {
+  items: {
+    label: string;
+    to: string;
+  }[]
 }
 
-export default function Nav({ items }: { items: NavLinkProps[] }) {
-  const activeClassName = "underline";
-
+export default function Navigation({ items }: NavigationProps) {
   return (
     <nav>
       <ul>
@@ -15,7 +15,7 @@ export default function Nav({ items }: { items: NavLinkProps[] }) {
           <li key={to}>
             <NavLink
               to={to}
-              className={({ isActive }) => isActive ? activeClassName : undefined}
+              className={({ isActive }) => isActive ? 'active' : undefined}
             >
               {label}
             </NavLink>
