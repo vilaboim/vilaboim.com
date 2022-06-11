@@ -7,6 +7,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { Nav } from './components';
+import { NAV_ITEMS } from "./constants";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -22,7 +24,10 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <Nav items={NAV_ITEMS} />
+        <main>
+          <Outlet />
+        </main>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
